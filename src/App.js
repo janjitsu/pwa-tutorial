@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -22,18 +21,15 @@ function App() {
                         </Nav>
                     </Container>
                 </Navbar>
-                <BrowserRouter>
-                    <Routes>
-                        <Route path="/" element={<Home/>}></Route>
-                        <Route path="/home" element={<Home/>}></Route>
-                        <Route path="/about" element={<About/>}></Route>
-                        <Route path="/users" element={<Users/>}></Route>
-                    </Routes>
-                </BrowserRouter>
             </div>
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-            </header>
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home/>}></Route>
+                    <Route path="/home" element={<Home/>}></Route>
+                    <Route path="/about" element={<About/>}></Route>
+                    <Route path="/users" element={<Users/>}></Route>
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }
