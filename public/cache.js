@@ -19,13 +19,14 @@ this.addEventListener("install",(event)=>{
     )
 });
 this.addEventListener("fetch",(event)=>{
-    event.respondWith(
-        caches.match(event.request).then((resp)=>{
-            if (resp) {
-                return resp
-            }
-        })
-    )
+    if(!navigator.online) {
+        event.respondWith(
+            caches.match(event.request).then((resp)=>{
+                if (resp) {
+                    return resp
+                }
+            })
+        )
+    }
 });
-console.warn("sw file is in public folder");
 

@@ -1,8 +1,7 @@
 export default function swDev()
 {
-    let swUrl = `${process.env.PUBLIC_URL}/sw.js`;
-    console.log(swUrl);
-    navigator.serviceWorker.register(swUrl).then((response)=>{
+    let cacheUrl = `${process.env.PUBLIC_URL}/cache.js`;
+    navigator.serviceWorker.register(cacheUrl).then((response)=>{
         console.warn("response",response)
     })
 }
